@@ -1,22 +1,23 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./Data.css";
-import { Context } from "../../store/Store";
-import { fetchData, fetchPokemonDetails } from "../../services/dataService";
+import slice from "../../store/Reducer";
+import { fetchData } from "../../services/dataService";
 import ListItem from "../ListItem/ListItem";
-import { DATA_ACTIONS } from "../../utils/actionHelpers";
 import Loading from "../Loading/Loading";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const Data = () => {
-  const [state, dispatch] = useContext(Context);
-
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log("STATE", state);
   const fetchInitialData = async () => {
     try {
       const jsonData = await fetchData();
       const data = jsonData.results;
-      dispatch({ type: DATA_ACTIONS.SET_DATA, payload: data });
+      dispatch(slice.actions.ADD_DATA(data));
     } catch (error) {
-      dispatch({ type: DATA_ACTIONS.SET_ERROR, payload: error });
+      dispatch(slice.actions.SET_ERROR(error));
     }
   };
 
