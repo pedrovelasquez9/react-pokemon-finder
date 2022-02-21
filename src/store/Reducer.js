@@ -1,15 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import ACTIONS from "./Actions";
+import DataSlice from "../components/Data/DataSlice";
 
-const initialState = {
-  data: [],
-  error: null,
+const AppSlices = {
+  pokemons: DataSlice,
 };
 
-const slice = createSlice({
-  name: "store",
-  initialState: initialState,
-  reducers: ACTIONS,
-});
-
-export default slice;
+export default AppSlices;

@@ -1,10 +1,10 @@
 import React from "react";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import Reducer from "./Reducer";
+import AppSlices from "./Reducer";
 
 const Store = ({ children }) => {
-  const store = configureStore({ reducer: Reducer.reducer });
+  const store = configureStore({ reducer: AppSlices });
   return <Provider store={store}>{children}</Provider>;
 };
 

@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./assets/styles/index.css";
 import App from "./components/App/App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Loading from "./components/Loading/Loading";
 import Store from "./store/Store";
 import { NextUIProvider } from "@nextui-org/react";
+import Data from "./components/Data/Data";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,7 +14,7 @@ ReactDOM.render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/test" element={<Loading />} />
+            <Route path="/home" element={<Data />} />
           </Routes>
         </BrowserRouter>
       </NextUIProvider>

@@ -6,4 +6,12 @@ const DATA_ACTIONS = {
   DEFAULT: "DEFAULT",
 };
 
-export { DATA_ACTIONS };
+const FETCH_STATUS = {
+  ERROR: "error",
+  IDLE: "idle",
+  SUCCESS: "success",
+  PENDING: "pending",
+  LOADING: "loading",
+};
+
+export { DATA_ACTIONS, FETCH_STATUS };
