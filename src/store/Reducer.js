@@ -1,4 +1,4 @@
-import DataSlice from "../components/Data/DataSlice";
+import DataSlice from "../components/Home/DataSlice";
 
 const AppSlices = {
   pokemons: DataSlice,

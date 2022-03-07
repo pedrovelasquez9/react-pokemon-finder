@@ -1,0 +1,72 @@
+@import url("//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon");
+
+path {
+  fill: transparent;
+}
+
+text {
+  fill: rgb(255, 214, 34);
+}
+
+.auth-card-body-container {
+  padding: 15px;
+}
+
+.auth-card-input,
+.auth-card-input:focus,
+.auth-card-input:hover {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.auth-card-body {
+  background-color: rgba(87, 87, 87, 1);
+  height: 166.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card-header {
+  background-color: rgba(193, 85, 85, 1);
+  height: 166.6px;
+  font-family: "Pokemon";
+  font-size: 56px;
+  align-items: flex-start;
+  text-shadow: 0 0 14px blue, 0 0 5px #000;
+}
+
+.auth-card-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 166.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.auth-card-form-separator {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #aaa;
+}
+
+.auth-card-footer-btn {
+  color: rgb(87, 87, 87);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(87, 87, 87, 0.5);
+}
+
+.auth-card-footer-btn a {
+  color: rgb(87, 87, 87);
+}
+
+.login-grid {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
