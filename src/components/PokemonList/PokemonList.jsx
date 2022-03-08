@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "./Home.css";
+import "./PokemonList.css";
 import { fetchPokemonList } from "./DataSlice";
 import ListItem from "../ListItem/ListItem";
 import Loading from "../Loading/Loading";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import { Input } from "@nextui-org/react";
 
-const Home = () => {
+const PokemonList = () => {
   const state = useSelector((state) => state);
   const pokemonListStatus = state.pokemons.status;
   const dispatch = useDispatch();
@@ -36,32 +35,10 @@ const Home = () => {
   }
 
   return (
-    <main className="home-main-container">
-      <header className="home-section header-section">
-        <Input
-          animated={false}
-          className="home-search-input"
-          clearable
-          style={{ width: "100%" }}
-          type={["text"]}
-          placeholder="Find Pokemon"
-          color="default"
-          aria-label="Find Pokemon"
-        />
-        <section className="data-section">
-          <ul className="main-ul">{data}</ul>
-        </section>
-      </header>
-      <section className="home-separator separator-section">
-        <button className="separator-btn"></button>
-      </section>
-      <footer className="home-section footer-section">
-        <section className="data-section">
-          <ul className="main-ul">{data}</ul>
-        </section>
-      </footer>
-    </main>
+    <section className="data-section">
+      <ul className="main-ul">{data}</ul>
+    </section>
   );
 };
 
-export default Home;
+export default PokemonList;
