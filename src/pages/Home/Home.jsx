@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Input } from "@nextui-org/react";
 import PokemonList from "../../components/PokemonList/PokemonList";
+import PokemonCard from "../../components/PokemonCard/PokemonCard";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <PokemonList />
       </header>
       <section className="home-separator separator-section">
+        <PokemonCard />
         <button className="separator-btn"></button>
       </section>
       <footer className="home-section footer-section">

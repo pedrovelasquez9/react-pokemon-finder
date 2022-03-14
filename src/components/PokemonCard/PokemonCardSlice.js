@@ -1,18 +1,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchData } from "../../services/dataService";
+import { fetchPokemonDetails } from "../../services/pokemonService";
 import { ACTIONS } from "../../utils/actionHelpers";
 
-export const fetchPokemonList = createAsyncThunk(
-  "fetch/pokemonList",
-  async () => {
-    const jsonData = await fetchData();
-    const data = jsonData.results;
+export const fetchPokemon = createAsyncThunk(
+  "fetch/pokemonDetails",
+  async (url) => {
+    const jsonData = await fetchPokemonDetails(url);
+    const data = jsonData;
     return data;
   }
 );
 
 const extraReducers = (builder) => {
-  builder.addCase(fetchPokemonList.fulfilled, ACTIONS.SET_DATA);
+  builder.addCase(fetchPokemon.fulfilled, ACTIONS.SET_DATA);
 };
 
 const initialState = {

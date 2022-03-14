@@ -1,2 +1,2 @@
-const BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=5&offset=0";
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 export { BASE_URL };
