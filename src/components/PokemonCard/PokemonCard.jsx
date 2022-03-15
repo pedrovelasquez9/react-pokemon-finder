@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import "./PokemonCard.css";
-import { useEffect } from "react";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loading from "../Loading/Loading";
 
@@ -24,9 +23,9 @@ const PokemonCard = () => {
 
   if (pokemonDetailStatus === "success" && state.pokemonDetails.data) {
     const data = state.pokemonDetails.data;
-    console.log(data);
+    //TODO: extract image and pokemon details to different components
     pokemonData = (
-      <section>
+      <section className="pokemon-card-container">
         <div className="card-image">
           <div className="card-container">
             <img
@@ -54,7 +53,7 @@ const PokemonCard = () => {
     );
   }
 
-  return <section className="pokemon-card-container">{pokemonData}</section>;
+  return pokemonData;
 };
 
 export default PokemonCard;

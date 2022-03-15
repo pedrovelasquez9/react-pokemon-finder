@@ -8,15 +8,19 @@ const ListItem = ({ value }) => {
   const { url, name } = value;
   const dispatch = useDispatch();
 
-  const selectPokemon = (pokemonUrl, name) => {
-    const buttonElem = document.getElementById(name);
-    buttonElem.classList.add("animated-btn");
-    setTimeout(() => {
-      buttonElem.classList.remove("animated-btn");
-    }, 1000);
+  const selectPokemon = (pokemonUrl, name = null) => {
+    //TODO: think about having an utils with setAnimation function
+    if (name) {
+      const buttonElem = document.getElementById(name);
+      buttonElem.classList.add("animated-btn");
+      setTimeout(() => {
+        buttonElem.classList.remove("animated-btn");
+      }, 1000);
+    }
     dispatch(fetchPokemon(pokemonUrl));
   };
 
+  //TODO: extract button to different component
   return (
     <li>
       <button
