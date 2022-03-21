@@ -10,9 +10,8 @@ import {
 import { Link } from "react-router-dom";
 import "./AuthCard.css";
 
-function AuthCard() {
+const AuthCard = () => {
   return (
-    //   {TODO: override css for background to simulate pokeball}
     <Grid.Container>
       <Grid>
         <Card
@@ -28,7 +27,6 @@ function AuthCard() {
         >
           <Card.Header className="auth-card-header">
             <Col>
-              {/* <Text h2 color="#fff"> */}
               <svg viewBox="0 0 500 500">
                 <path
                   id="curve"
@@ -38,7 +36,6 @@ function AuthCard() {
                   <textPath href="#curve">Pokemon finder</textPath>
                 </text>
               </svg>
-              {/* </Text> */}
             </Col>
           </Card.Header>
           <Card.Body className="auth-card-body">
@@ -50,67 +47,19 @@ function AuthCard() {
               className="auth-card-body-container"
             >
               <Row xs={4}>
-                <Col>
-                  <Input
-                    animated={false}
-                    className="auth-card-input"
-                    clearable
-                    type={["text"]}
-                    placeholder="Username"
-                    color="default"
-                    aria-label="Username"
-                  />
-                </Col>
                 <Col xs={4}>
-                  <section className="auth-card-form-separator"></section>
-                </Col>
-                <Col xs={4}>
-                  <Input
-                    animated={false}
-                    className="auth-card-input"
-                    clearable
-                    type={["password"]}
-                    placeholder="Password"
-                    color="default"
-                    aria-label="Password"
-                  />
+                  <Link to="/home">
+                    <button className="auth-card-form-separator"></button>
+                  </Link>
                 </Col>
               </Row>
             </Container>
           </Card.Body>
-          <Card.Footer blur className="auth-card-footer">
-            <Row>
-              <Col
-                xs={6}
-                align="center"
-                display="flex"
-                justify="center"
-                direction="row"
-              >
-                <Button flat auto rounded className="auth-card-footer-btn">
-                  Regístrate
-                </Button>
-              </Col>
-              <Col
-                xs={6}
-                align="center"
-                display="flex"
-                justify="center"
-                direction="row"
-              >
-                <Button flat auto rounded className="auth-card-footer-btn">
-                  <Link to="/home">Iniciar</Link>
-                </Button>
-              </Col>
-            </Row>
-          </Card.Footer>
+          <Card.Footer blur className="auth-card-footer"></Card.Footer>
         </Card>
       </Grid>
-      {/* <Link to="/home">
-            <button>Test go home</button>
-          </Link> */}
     </Grid.Container>
   );
-}
+};
 
 export default AuthCard;

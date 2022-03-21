@@ -19,16 +19,17 @@ text {
 
 .auth-card-body {
   background-color: rgba(87, 87, 87, 1);
-  height: 166.6px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .auth-card-header {
   background-color: rgba(193, 85, 85, 1);
-  height: 166.6px;
+  height: 200px;
   font-family: "Pokemon";
   font-size: 56px;
   align-items: flex-start;
@@ -37,7 +38,7 @@ text {
 
 .auth-card-footer {
   background-color: rgba(255, 255, 255, 0.9);
-  height: 166.6px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,10 +47,11 @@ text {
 
 .auth-card-form-separator {
   background-color: #fff;
-  width: 50px;
   height: 50px;
+  width: 50px;
   border-radius: 50%;
   border: 5px solid #aaa;
+  cursor: pointer;
 }
 
 .auth-card-footer-btn {
