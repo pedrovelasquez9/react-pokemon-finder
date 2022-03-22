@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Card,
-  Col,
-  Row,
-  Button,
-  Input,
-  Container,
-} from "@nextui-org/react";
+import { Grid, Card, Col, Row, Container } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import "./AuthCard.css";
 

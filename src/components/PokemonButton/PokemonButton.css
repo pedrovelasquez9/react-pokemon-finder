@@ -1,0 +1,44 @@
+.list-item {
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 15px;
+  color: #000;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid rgb(87, 87, 87);
+  box-shadow: inset 3px 1px rgb(87 87 87);
+  cursor: pointer;
+}
+
+.animated-btn {
+  animation-name: btnDown;
+  animation-duration: 1s;
+}
+
+@keyframes btnDown {
+  from {
+    box-shadow: inset 1px 1px rgb(87 87 87);
+  }
+  to {
+    box-shadow: inset 3px 1px rgb(87 87 87);
+  }
+}
+
+.pokeball-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.pokemon-btn {
+  font-family: "pokemon";
+  color: rgb(255, 227, 103);
+  text-shadow: 0 0 5px #000, 0 0 5px #000;
+  letter-spacing: 3px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+}
