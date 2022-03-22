@@ -41,7 +41,7 @@ const AuthCard = () => {
               <Row xs={4}>
                 <Col xs={4}>
                   <Link to="/home">
-                    <button className="auth-card-form-separator"></button>
+                    <button className="auth-card-form-separator pulse"></button>
                   </Link>
                 </Col>
               </Row>
