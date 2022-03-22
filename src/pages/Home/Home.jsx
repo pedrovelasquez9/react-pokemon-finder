@@ -37,16 +37,9 @@ const Home = () => {
   return (
     <main className="home-main-container">
       <header className="home-section header-section">
-        <Input
-          animated={false}
-          className="home-search-input"
-          clearable
-          style={{ width: "100%" }}
-          type={["text"]}
-          placeholder="Find Pokemon"
-          color="default"
-          aria-label="Find Pokemon"
-        />
+        <div className="search-input-container">
+          <input type="text" name="search" id="search" />
+        </div>
         {state.pokemons.status === "success" ? (
           <PokemonList data={state.pokemons.data.slice(0, 5)} />
         ) : (
