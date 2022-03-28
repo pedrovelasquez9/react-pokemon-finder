@@ -23,6 +23,13 @@ const Home = () => {
     }
   }, [state.pokemons.status]);
 
+  const searchPokemon = (evt) => {
+    if (evt.keyCode === 13) {
+      console.log("presiona enter");
+    }
+    console.log("presiona asdjkasdhk");
+  };
+
   let data = <Loading message="Cargando..."></Loading>;
 
   if (state.error) {
@@ -38,7 +45,12 @@ const Home = () => {
     <main className="home-main-container">
       <header className="home-section header-section">
         <div className="search-input-container">
-          <input type="text" name="search" id="search" />
+          <input
+            type="search"
+            name="search"
+            id="search"
+            onKeyUp={(evt) => searchPokemon(evt)}
+          />
         </div>
         {state.pokemons.status === "success" ? (
           <PokemonList data={state.pokemons.data.slice(0, 5)} />

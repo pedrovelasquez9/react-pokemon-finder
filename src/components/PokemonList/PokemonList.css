@@ -13,6 +13,12 @@
 }
 
 @media (max-width: 1000px) {
+  .pokeball-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
   .main-ul {
     list-style: none;
     text-align: left;
@@ -24,7 +30,7 @@
     overflow-x: scroll;
   }
 
-  .pokeball-icon {
-    display: none;
+  .main-ul li {
+    margin-right: 10px;
   }
 }
