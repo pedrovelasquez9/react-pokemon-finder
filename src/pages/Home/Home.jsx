@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-import { Input } from "@nextui-org/react";
 import PokemonList from "../../components/PokemonList/PokemonList";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,6 +8,7 @@ import { fetchPokemon } from "../../components/PokemonCard/PokemonCardSlice";
 import { getRandomValue } from "./../../utils/arrayHelpers";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import SearchInput from "./../../components/SearchInput/SearchInput";
 
 const Home = () => {
   const state = useSelector((state) => state);
@@ -22,13 +22,6 @@ const Home = () => {
       dispatch(fetchPokemon(getRandomValue(state.pokemons.data).url));
     }
   }, [state.pokemons.status]);
-
-  const searchPokemon = (evt) => {
-    if (evt.keyCode === 13) {
-      console.log("presiona enter");
-    }
-    console.log("presiona asdjkasdhk");
-  };
 
   let data = <Loading message="Cargando..."></Loading>;
 
@@ -44,13 +37,8 @@ const Home = () => {
   return (
     <main className="home-main-container">
       <header className="home-section header-section">
-        <div className="search-input-container">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            onKeyUp={(evt) => searchPokemon(evt)}
-          />
+        <div>
+          <SearchInput />
         </div>
         {state.pokemons.status === "success" ? (
           <PokemonList data={state.pokemons.data.slice(0, 5)} />

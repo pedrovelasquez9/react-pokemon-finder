@@ -1,0 +1,82 @@
+.pokeball-section-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+}
+
+.pokeball-section {
+  height: 25px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #363638;
+}
+
+.pokeball-separator {
+  height: 1px;
+  width: 50px;
+  background-color: rgb(51, 51, 51);
+}
+
+.pokeball-header {
+  border-radius: 50px 50px 0 0;
+  background-color: #196eef;
+}
+
+.pokeball-footer {
+  border-radius: 0 0 50px 50px;
+}
+
+.pokeball-btn {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-input {
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+  height: 50px;
+  border: none;
+  text-indent: 52px;
+  visibility: hidden;
+}
+
+.grid-container:hover > .search-input {
+  width: 20%;
+  transition: 1s;
+  visibility: visible;
+}
+
+.grid-container:hover > .pokeball-section-container {
+  animation: spin 1s linear;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
