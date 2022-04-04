@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchPokemonDetails } from "../../services/pokemonService";
+import { searchPokemon } from "../../services/searchService";
 import { ACTIONS } from "../../utils/actionHelpers";
 
 export const fetchPokemon = createAsyncThunk(
@@ -11,8 +12,19 @@ export const fetchPokemon = createAsyncThunk(
   }
 );
 
+export const fetchPokemonByName = createAsyncThunk(
+  "fetch/pokemonByName",
+  async (pokemonName) => {
+    const jsonData = await searchPokemon(pokemonName);
+    const data = jsonData;
+    return data;
+  }
+);
+
 const extraReducers = (builder) => {
-  builder.addCase(fetchPokemon.fulfilled, ACTIONS.SET_DATA);
+  builder
+    .addCase(fetchPokemon.fulfilled, ACTIONS.SET_DATA)
+    .addCase(fetchPokemonByName.fulfilled, ACTIONS.SET_DATA);
 };
 
 const initialState = {
