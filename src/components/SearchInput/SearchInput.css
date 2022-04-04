@@ -52,12 +52,15 @@
   border: none;
   text-indent: 52px;
   visibility: hidden;
+  transition: 1s;
+  background-color: transparent;
 }
 
 .grid-container:hover > .search-input {
   width: 100%;
   transition: 1s;
   visibility: visible;
+  background-color: #fff;
 }
 
 .grid-container:hover > .pokeball-section-container {

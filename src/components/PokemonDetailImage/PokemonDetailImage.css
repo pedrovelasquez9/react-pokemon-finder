@@ -5,24 +5,33 @@
 
 .card-container {
   position: absolute;
-  top: -75px;
+  top: -65px;
   width: 375px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.pokemon-image {
+  width: 90%;
+}
+
 @media (max-width: 768px) {
   .card-container {
     position: absolute;
-    top: -45px;
-    width: 375px;
+    top: -20px;
+    width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
+  .card-image {
+    position: relative;
+    height: 140px;
+  }
+
   .pokemon-image {
-    width: 90%;
+    width: 65%;
   }
 }
