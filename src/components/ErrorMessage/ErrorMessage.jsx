@@ -1,6 +1,11 @@
+import "./ErrorMessage.css";
+
 const ErrorMessage = ({ message, error }) => {
-  console.error(error);
-  return <p>{message}</p>;
+  return (
+    <div className="error-msg-text">
+      <p>{message}</p>
+    </div>
+  );
 };
 
 export default ErrorMessage;

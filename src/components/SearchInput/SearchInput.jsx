@@ -1,16 +1,15 @@
+import { useState } from "react";
 import "./SearchInput.css";
 import { useDispatch } from "react-redux";
 import { fetchPokemonByName } from "../PokemonCard/PokemonCardSlice";
 
 const SearchInput = () => {
   const dispatch = useDispatch();
+  const [searchValue, setSearchValue] = useState("");
 
-  const searchPokemon = (evt) => {
-    if (evt.keyCode === 13) {
-      console.log(evt.target.value);
-      dispatch(fetchPokemonByName(evt.target.value));
-      console.log("presiona enter");
-    }
+  const searchPokemon = () => {
+    dispatch(fetchPokemonByName(searchValue));
+    setSearchValue("");
   };
 
   return (
@@ -19,7 +18,10 @@ const SearchInput = () => {
         <section className="pokeball-section-container">
           <section className="pokeball-section pokeball-header"></section>
           <section className="pokeball-separator "></section>
-          <button className="pokeball-btn"></button>
+          <button
+            className="pokeball-btn"
+            onClick={() => searchPokemon()}
+          ></button>
           <section className="pokeball-section pokeball-footer"></section>
         </section>
         <input
@@ -27,16 +29,14 @@ const SearchInput = () => {
           type="text"
           name="searchPokemonInput"
           id="searchPokemonInput"
-          onKeyUp={(evt) => searchPokemon(evt)}
+          value={searchValue}
+          onChange={(evt) => setSearchValue(evt.target.value)}
+          onKeyUp={(evt) => {
+            evt.key === "Enter" ? searchPokemon() : null;
+          }}
         />
       </div>
     </div>
-    // <input
-    //   type="search"
-    //   name="search"
-    //   id="search"
-    //   onKeyUp={(evt) => searchPokemon(evt)}
-    // />
   );
 };
 

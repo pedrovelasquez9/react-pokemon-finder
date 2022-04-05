@@ -4,22 +4,29 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loading from "../Loading/Loading";
 import PokemonDetailImage from "../PokemonDetailImage/PokemonDetailImage";
 import PokemonDetailData from "../PokemonDetailData/PokemonDetailData";
+import { FETCH_STATUS } from "../../utils/actionHelpers";
 
 const PokemonCard = () => {
   const state = useSelector((state) => state);
   const pokemonDetailStatus = state.pokemonDetails.status;
   let pokemonData = null;
 
-  if (pokemonDetailStatus === "loading" || pokemonDetailStatus === "pending") {
+  if (
+    pokemonDetailStatus === FETCH_STATUS.LOADING ||
+    pokemonDetailStatus === FETCH_STATUS.PENDING
+  ) {
     pokemonData = <Loading message="Cargando..."></Loading>;
   }
 
-  if (state.error) {
-    pokemonData(
-      <ErrorMessage
-        message="Ha ocurrido un error llamando a la API"
-        error={state.error}
-      ></ErrorMessage>
+  if (pokemonDetailStatus === FETCH_STATUS.ERROR) {
+    console.log(state);
+    pokemonData = (
+      <section className="pokemon-card-container error-card-container">
+        <ErrorMessage
+          message="El Pokemon no existe o lo ha capturado otro entrenador"
+          error={state.error}
+        ></ErrorMessage>
+      </section>
     );
   }
 

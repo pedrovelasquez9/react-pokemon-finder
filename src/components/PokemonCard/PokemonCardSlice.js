@@ -24,7 +24,9 @@ export const fetchPokemonByName = createAsyncThunk(
 const extraReducers = (builder) => {
   builder
     .addCase(fetchPokemon.fulfilled, ACTIONS.SET_DATA)
-    .addCase(fetchPokemonByName.fulfilled, ACTIONS.SET_DATA);
+    .addCase(fetchPokemon.rejected, ACTIONS.SET_DATA_ERROR)
+    .addCase(fetchPokemonByName.fulfilled, ACTIONS.SET_DATA)
+    .addCase(fetchPokemonByName.rejected, ACTIONS.SET_DATA_ERROR);
 };
 
 const initialState = {
