@@ -2,28 +2,24 @@ import { useState } from "react";
 import "./SearchInput.css";
 import { useDispatch } from "react-redux";
 import { fetchPokemonByName } from "../PokemonCard/PokemonCardSlice";
+import Pokeball from "../Pokeball/Pokeball";
 
 const SearchInput = () => {
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState("");
 
   const searchPokemon = () => {
-    dispatch(fetchPokemonByName(searchValue));
-    setSearchValue("");
+    const validatedValue = searchValue.trim();
+    if (validatedValue) {
+      dispatch(fetchPokemonByName(validatedValue));
+      setSearchValue("");
+    }
   };
 
   return (
     <div>
       <div className="grid-container">
-        <section className="pokeball-section-container">
-          <section className="pokeball-section pokeball-header"></section>
-          <section className="pokeball-separator "></section>
-          <button
-            className="pokeball-btn"
-            onClick={() => searchPokemon()}
-          ></button>
-          <section className="pokeball-section pokeball-footer"></section>
-        </section>
+        <Pokeball btnFunction={searchPokemon} />
         <input
           className="search-input"
           type="text"
