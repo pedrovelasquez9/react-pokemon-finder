@@ -19,7 +19,6 @@ const PokemonCard = () => {
   }
 
   if (pokemonDetailStatus === FETCH_STATUS.ERROR) {
-    console.log(state);
     pokemonData = (
       <section className="pokemon-card-container error-card-container">
         <ErrorMessage

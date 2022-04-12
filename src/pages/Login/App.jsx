@@ -10,6 +10,7 @@ function App() {
         backgroundImage: `url(${back1})`,
       }}
     >
+      <h1 className="main-page-title">Pokemon finder</h1>
       <div className="main-container">
         <AuthCard />
       </div>
