@@ -17,21 +17,19 @@ const SearchInput = () => {
   };
 
   return (
-    <div>
-      <div className="grid-container">
-        <Pokeball btnFunction={searchPokemon} />
-        <input
-          className="search-input"
-          type="text"
-          name="searchPokemonInput"
-          id="searchPokemonInput"
-          value={searchValue}
-          onChange={(evt) => setSearchValue(evt.target.value)}
-          onKeyUp={(evt) => {
-            evt.key === "Enter" ? searchPokemon() : null;
-          }}
-        />
-      </div>
+    <div className="grid-container">
+      <Pokeball btnFunction={searchPokemon} />
+      <input
+        className="search-input"
+        type="text"
+        name="searchPokemonInput"
+        id="searchPokemonInput"
+        value={searchValue}
+        onChange={(evt) => setSearchValue(evt.target.value)}
+        onKeyUp={(evt) => {
+          evt.key === "Enter" ? searchPokemon() : null;
+        }}
+      />
     </div>
   );
 };

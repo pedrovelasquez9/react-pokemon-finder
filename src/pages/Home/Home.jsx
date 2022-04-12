@@ -37,9 +37,7 @@ const Home = () => {
   return (
     <main className="home-main-container">
       <header className="home-section header-section">
-        <div>
-          <SearchInput />
-        </div>
+        <SearchInput />
         {state.pokemons.status === "success" ? (
           <PokemonList data={state.pokemons.data.slice(0, 5)} />
         ) : (

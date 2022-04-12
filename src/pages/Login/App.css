@@ -57,6 +57,17 @@
   height: 100vh;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 @media screen and (max-width: 700px) {
   .App {
     flex-direction: column;
@@ -64,5 +75,16 @@
 
   .App-section {
     width: 100%;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
   }
 }

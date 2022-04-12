@@ -1,5 +1,4 @@
 import back1 from "../../assets/images/main-back-1.jpg";
-import { Container, Row } from "@nextui-org/react";
 import "./App.css";
 import AuthCard from "../../components/AuthCard/AuthCard";
 
@@ -11,18 +10,9 @@ function App() {
         backgroundImage: `url(${back1})`,
       }}
     >
-      <Container responsive xs={true} gap={0}>
-        <Row
-          className="row-container"
-          justify="center"
-          align="center"
-          direction="column"
-          display="flex"
-          xs={4}
-        >
-          <AuthCard />
-        </Row>
-      </Container>
+      <div className="main-container">
+        <AuthCard />
+      </div>
     </main>
   );
 }

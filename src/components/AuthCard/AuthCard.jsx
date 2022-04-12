@@ -1,5 +1,3 @@
-import { Grid, Card, Col, Row, Container } from "@nextui-org/react";
-import { Link } from "react-router-dom";
 import "./AuthCard.css";
 import { useNavigate } from "react-router-dom";
 import Pokeball from "../Pokeball/Pokeball";
@@ -8,11 +6,10 @@ const AuthCard = () => {
   const navigate = useNavigate();
 
   const navigateToHome = () => {
-    console.log("entra");
     navigate("/home");
   };
 
-  return <Pokeball btnFunction={navigateToHome} />;
+  return <Pokeball btnFunction={navigateToHome} isLoginPage={true} />;
   /* <svg viewBox="0 0 500 500">
     <path
       id="curve"
