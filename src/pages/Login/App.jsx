@@ -14,7 +14,7 @@ function App() {
       <div className="main-container">
         <AuthCard />
       </div>
-      <footer>
+      <footer className="main-footer">
         Desarrollado en directo por Twitch en el canal de{" "}
         <a href="https://www.twitch.tv/programacion_en_esp" target="_blank">
           Programación en Español
