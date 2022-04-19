@@ -14,6 +14,19 @@ function App() {
       <div className="main-container">
         <AuthCard />
       </div>
+      <footer>
+        Desarrollado en directo por Twitch en el canal de{" "}
+        <a href="https://www.twitch.tv/programacion_en_esp" target="_blank">
+          Programación en Español
+        </a>{" "}
+        -{" "}
+        <a
+          href="https://github.com/pedrovelasquez9/react-pokemon-finder"
+          target="_blank"
+        >
+          Ver el código
+        </a>
+      </footer>
     </main>
   );
 }
