@@ -35,3 +35,43 @@
     width: 65%;
   }
 }
+
+@media (max-height: 900px) {
+  .card-container {
+    position: absolute;
+    top: -20px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-image {
+    position: relative;
+    height: 140px;
+  }
+
+  .pokemon-image {
+    width: 65%;
+  }
+}
+
+@media (max-height: 665px) {
+  .card-container {
+    position: absolute;
+    top: -20px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-image {
+    position: relative;
+    height: 100px;
+  }
+
+  .pokemon-image {
+    width: 65%;
+  }
+}

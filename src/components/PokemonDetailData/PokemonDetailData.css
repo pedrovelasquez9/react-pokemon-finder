@@ -30,3 +30,12 @@
   justify-content: center;
   text-transform: capitalize;
 }
+
+@media (max-height: 665px) {
+  .pokemon-card-info div {
+    width: 33%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
