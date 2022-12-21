@@ -5,7 +5,7 @@ import Home from "../pages/Home/Home";
 
 function AppRoutes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-pokemon-finder">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />

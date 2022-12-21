@@ -1,42 +1,43 @@
-# React project template using Context API
+# [Pokemon finder Web App](https://pedrovelasquez9.github.io/react-pokemon-finder/)
 
-## Description
+<div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <img src="https://programacion-es.dev/assets/images/Logo-circle.png" with="150px" height="150px" />
+    <h1>Programación en español</h1>
+</div>
 
-This is a project template for developing React applications implementing react Context and Reducer hooks as a main state manager and JS fetch API for data fetching.
+## Preview
 
-## Project structure
+[Launch app](https://pedrovelasquez9.github.io/react-pokemon-finder/)
 
-- src/
-  - assets/
-    - images/
-    - styles/
-  - components/
-    - App/
-    - Data/
-    - ErrorMessage/
-    - ListItem/
-    - Loading/
-  - services/
-  - store/
-  - utils/
+![preview](https://programacion-es.dev/assets/images/pokemon-finder-preview.png)
 
-Each visual component has their respective .jsx and .css files in order to associate them easily.
+## About
 
-The **Context/Reducer** store implementation is located in the store/ directory where the Store.jsx file exports the Provider tag used as a global container inside the App.jsx component render method.
+### Powered by React
 
-## Main component
+<a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--qo_Wp38Z--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/e0nl7ziy1la7bpwj7rsp.png" alt="React" width="100"/></a>
 
-The main view component is located in the components/Data/ directory and is the one that calls the fetch function defined in the services/ directory in order to bring the Pokemon data to the application and render it.
+Web application developed with **React and Redux** that connects to **[POKEAPI](https://pokeapi.co/)** in live sessions on Programacion en español's [Twitch Channel](https://www.twitch.tv/programacion_en_esp).
 
-## How to run
+## How to start?
 
-Clone this repository and run the following commands:
+To run the project, clone the repository, open the project in your local environment and execute the following commands:
 
-- **npm install**
+- **npm i**
 - **npm run dev**
 
-## Additional information
+## Want to collaborate with the project?
 
-This project is build using **Vite 2.8.0** and **React 17.0.2**.
+If you wish to collaborate, you can **fork** the project in order to work in your environment. Once you're ready to go, you can launch a PR to **develop branch** of this repository
 
-This template project has been build and its structure defined live in [Programación en español](https://my.bio/prog-es) [Twitch channel](https://www.twitch.tv/programacion_en_esp)
+## Join the community
+
+<div style="width:100%;display:flex;flex-direction:row;justify-content:center">
+    <a href="https://discord.gg/programacion-es"><img src="https://programacion-es.dev/assets/images/discord-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.youtube.com/@programacion-es"><img src="https://programacion-es.dev/assets/images/youtube-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.twitch.tv/programacion_en_esp"><img src="https://programacion-es.dev/assets/images/twitch-logo-borderless.webp" with="50px" height="50px" /></a>
+    <a href="https://instagram.com/programacion.es/"><img src="https://programacion-es.dev/assets/images/instagram-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://twitter.com/program_es"><img src="https://programacion-es.dev/assets/images/twitter-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.tiktok.com/@programacion.es"><img src="https://programacion-es.dev/assets/images/tiktok-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.linkedin.com/in/pedroplasencia/"><img src="https://programacion-es.dev/assets/images/linkedin-icon.webp" with="50px" height="50px" /></a>
+</div>
